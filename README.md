@@ -31,5 +31,17 @@ It supports **multi-turn conversations**, **contextual memory**, and **LangSmith
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Installation & Setup
+
+Follow these steps to install, configure, and run the **Conversational RAG Assistant** on your local machine.  
+
+---
+
+### 🧩 Step 1: Clone the Repository
+
+Clone the repository from GitHub and navigate to the project directory.
+
+```bash
+git clone https://github.com/kirantushar10/Conversational-RAG-Assistant.git
+cd Conversational-RAG-Assistant
 
