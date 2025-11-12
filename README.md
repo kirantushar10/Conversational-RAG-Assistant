@@ -88,3 +88,35 @@ The chatbot will scrape that site, create embeddings, and build a vector databas
 
 4. Inspect traces, prompts, retrieved documents, and model responses in detail.
 
+---
+
+## 🧩 How It Works
+
+1. Document Loading & Splitting: Uses WebBaseLoader and RecursiveCharacterTextSplitter to load and chunk web content.
+
+2. Embeddings Generation: Text chunks are embedded into vectors using HuggingFaceEmbeddings.
+
+3. Vector Storage & Retrieval: Stores embeddings in Chroma and retrieves semantically similar chunks based on user queries.
+
+4. LLM Response Generation: Combines retrieved documents with the user query to generate a concise, contextually grounded response.
+
+5. Conversation Memory: Uses RunnableWithMessageHistory to automatically track and remember previous exchanges.
+
+6. Tracing with LangSmith: Every chain run, retriever query, and LLM call is logged for easy debugging and performance monitoring.
+
+---
+
+## 💬 Example Conversation
+
+User: What is self-reflection?
+Bot: Self-reflection is the process of analyzing one’s thoughts and behavior.
+
+User: Tell me more about it.
+Bot: It helps individuals learn from past experiences and improve future decision-making.
+
+User: What is task decomposition?
+Bot: Task decomposition means breaking a complex task into smaller, manageable steps.
+
+---
+
+
