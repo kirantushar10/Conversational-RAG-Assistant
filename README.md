@@ -45,10 +45,46 @@ Clone the repository from GitHub and navigate to the project directory.
 git clone https://github.com/kirantushar10/Conversational-RAG-Assistant.git
 cd Conversational-RAG-Assistant
 ```
-### Install Dependencies
+### Step 2: Install Dependencies
 
 ```bash
 python -m venv venv
 source venv/bin/activate   # (Windows: venv\Scripts\activate)
 pip install -r requirements.txt
 ```
+### Step 3: Add API Keys and Run
+
+Create a .env file in the project root and add:
+
+```bash
+LANGCHAIN_API_KEY = "Add your LangChain API key here"
+LANGCHAIN_PROJECT = "Conversational RAG Assistant"
+HF_TOKEN = "Add your Hugging Face API key here"
+GROQ_API_KEY = "Add your Groq API key here"
+LANGCHAIN_TRACING_V2 = "true"
+```
+
+### Step 4: Run the Chatbot (Jupyter Notebook Version)
+
+Since this project runs inside a Jupyter Notebook, you don’t need to execute a `.py` file.  
+You can start the chatbot directly in your browser by opening and running the notebook.
+
+Add a Website of Your Choice: Find the section in the notebook where the loader is defined
+
+```bash
+loader = WebBaseLoader(
+    web_paths=("https://example.com",),
+)
+```
+The chatbot will scrape that site, create embeddings, and build a vector database (Chroma) from its text — letting you chat based on that website’s content.
+
+### Step 5 — View LangSmith Dashboard
+
+1. Open https://smith.langchain.com
+
+2. Log in with your LangSmith account linked to your LANGCHAIN_API_KEY
+
+3. Select your project Conversational RAG Assistant
+
+4. Inspect traces, prompts, retrieved documents, and model responses in detail.
+
