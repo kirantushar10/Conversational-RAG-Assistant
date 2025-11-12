@@ -1,5 +1,3 @@
-# Conversational-RAG-Assistant
-
 # 🧠 Conversational RAG Assistant
 
 An advanced **Retrieval-Augmented Generation (RAG)** chatbot built with **LangChain**, **Groq Llama 3**, **Chroma**, and **Hugging Face embeddings**.  
